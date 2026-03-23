@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: event-space-api
+    env: node
+    buildCommand: npm install
+    startCommand: npm run server
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false  # Set this in Render dashboard
+      - key: PORT
+        fromService:
+          type: web
+          name: event-space-api
+          property: port

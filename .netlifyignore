@@ -1,0 +1,18 @@
+# Netlify ignore file
+# Files and folders to exclude from Netlify builds
+
+node_modules/
+.expo/
+android/
+ios/
+.git/
+.env
+.env.local
+*.log
+server/
+scripts/
+README*.md
+DEPLOYMENT.md
+QUICK-START.md
+TROUBLESHOOTING.md
+*.md
