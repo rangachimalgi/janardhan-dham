@@ -9,22 +9,24 @@ export default function HomeScreen() {
     navigation.navigate("CreateEvent", { hall });
   };
   const halls = [
-  { id: "BIG_1", name: "Vrindavana Main Hall", subname: "2nd Floor", icon: "business" },
-  { id: "BIG_2", name: "Vrindavana Mini Hall", subname: "2nd Floor", icon: "business" },
-  { id: "MINI_1", name: "Kamadhenu Main Hall", subname: "3rd Floor", icon: "business" },
-  { id: "MINI_2", name: "Kamadhenu Mini Hall", subname: "3rd Floor", icon: "business" },
-  { id: "HOMA_1", name: "Homa Hall", subname: "4th Floor", icon: "business" },
-];
+    { id: "F1_1", name: "1st Floor", subname: "1st Floor", icon: "business" },
+    { id: "F1_2", name: "1st Floor", subname: "1st Floor", icon: "business" },
+    { id: "F2_1", name: "2nd Floor", subname: "2nd Floor", icon: "business" },
+    { id: "F2_2", name: "2nd Floor", subname: "2nd Floor", icon: "business" },
+    { id: "F3_1", name: "3rd Floor", subname: "3rd Floor", icon: "business" },
+    { id: "F3_2", name: "3rd Floor", subname: "3rd Floor", icon: "business" },
+    { id: "F4_1", name: "4th Floor", subname: "4th Floor", icon: "business" },
+  ];
 
 
   return (
     <SafeAreaView style={styles.container}>
       {/* Identity Section */}
       <View style={styles.identity}>
-        <Text style={styles.title}>Sri Raghavendra Swamy</Text>
-        <Text style={styles.subtitle}>Vrindavana Samithi Kachiguda, Hyderabad</Text>
+        <Text style={styles.title}>Sri Janardhan Dham</Text>
+        {/* <Text style={styles.subtitle}>Vrindavana Samithi Kachiguda, Hyderabad</Text> */}
 
-        <Image source={require("../../assets/logo.png")} style={styles.logo} />
+        {/* <Image source={require("../../assets/logo.png")} style={styles.logo} /> */}
       </View>
 
       {/* Tiles */}

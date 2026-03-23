@@ -7,7 +7,7 @@ import { Platform } from 'react-native';
 // - Physical Device: use your computer's IP address (e.g., 192.168.1.100)
 //   Update the IP_ADDRESS below with your computer's local IP
 
-const IP_ADDRESS = '192.168.1.15'; // Change this to your computer's IP for physical devices
+const IP_ADDRESS = '192.168.1.3'; // Change this to your computer's IP for physical devices
 const PORT = '8000';
 
 // Production API URL - Your Render backend URL
@@ -53,7 +53,7 @@ const getBaseURL = () => {
   // Development mode (only when __DEV__ is true)
   let devURL;
   if (Platform.OS === 'android') {
-    devURL = `http://192.168.1.15:${PORT}/api`;
+    devURL = `http://192.168.1.3:${PORT}/api`;
   } else if (Platform.OS === 'ios') {
     devURL = `http://${IP_ADDRESS}:${PORT}/api`;
   } else {
