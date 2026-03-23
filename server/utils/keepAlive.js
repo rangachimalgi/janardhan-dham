@@ -4,7 +4,7 @@ import https from 'https';
 // This should be called after the server starts listening.
 export function startKeepAlive() {
   function pingServer() {
-    const url = process.env.KEEPALIVE_URL || 'https://janardhan-dham-api.onrender.com';
+    const url = process.env.KEEPALIVE_URL || 'https://janardhan-dham.onrender.com';
     const req = https.get(url, { timeout: 10000 }, (res) => {
       console.log(
         `[${new Date().toISOString()}] Server pinged with response status code:`,
