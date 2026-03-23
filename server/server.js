@@ -36,7 +36,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Basic route
 app.get('/', (req, res) => {
-  res.json({ message: 'Event Space API is running!' });
+  res.json({ message: 'Janardhan Dham API is running!' });
 });
 
 // Health check route

@@ -13,7 +13,7 @@ const PORT = '8000';
 // Production API URL - Your Render backend URL
 // For native Android/iOS apps: Just update this URL directly
 // For web builds: You can also set EXPO_PUBLIC_API_URL environment variable
-const PRODUCTION_API_URL = process.env.EXPO_PUBLIC_API_URL || 'https://event-space-new.onrender.com/api';
+const PRODUCTION_API_URL = process.env.EXPO_PUBLIC_API_URL || 'https://janardhan-dham-api.onrender.com/api';
 
 // Force production mode (set to true to always use production API)
 // Set to true if you want to always use Render backend, even in development
