@@ -7,6 +7,13 @@ import { Ionicons } from "@expo/vector-icons";
 import DateTimePicker from "@react-native-community/datetimepicker";
 import API_BASE_URL from "../config/api";
 
+function formatHallDisplay(hall) {
+  if (hall == null) return "Unknown Hall";
+  if (typeof hall === "string") return hall;
+  const parts = [hall.name, hall.subname].filter(Boolean);
+  return parts.length ? parts.join(" · ") : "Unknown Hall";
+}
+
 export default function EventsScreen() {
   const navigation = useNavigation();
   const [allEvents, setAllEvents] = useState([]); // Store all events
@@ -71,7 +78,7 @@ export default function EventsScreen() {
       const formattedEvents = data.map((event) => ({
         ...event, // Keep all original data first
         id: event._id,
-        hallDisplay: event.hall?.name || "Unknown Hall", // String for display
+        hallDisplay: formatHallDisplay(event.hall), // Floor + subname for display
         // Keep original hall object for editing
         dateDisplay: new Date(event.date).toLocaleDateString("en-US", {
           day: "numeric",

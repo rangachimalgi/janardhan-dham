@@ -9,15 +9,15 @@ export default function HomeScreen() {
     navigation.navigate("CreateEvent", { hall });
   };
   const halls = [
-    { id: "F1_1", name: "1st Floor", subname: "1st Floor", icon: "business" },
-    { id: "F1_2", name: "1st Floor", subname: "1st Floor", icon: "business" },
-    { id: "F2_1", name: "2nd Floor", subname: "2nd Floor", icon: "business" },
-    { id: "F2_2", name: "2nd Floor", subname: "2nd Floor", icon: "business" },
-    { id: "F3_1", name: "3rd Floor", subname: "3rd Floor", icon: "business" },
-    { id: "F3_2", name: "3rd Floor", subname: "3rd Floor", icon: "business" },
-    { id: "F4_1", name: "4th Floor", subname: "4th Floor", icon: "business" },
+    { id: "F1_1", name: "Gr Floor", subname: "Room no 1", icon: "business" },
+    { id: "F1_2", name: "Gr Floor", subname: "Room no 2", icon: "business" },
+    { id: "F2_1", name: "1st Floor", subname: "Room no 3", icon: "business" },
+    { id: "F2_2", name: "1st Floor", subname: "Room no 4", icon: "business" },
+    { id: "F3_1", name: "Gr Floor", subname: "Mini Hall", icon: "business" },
+    { id: "F3_2", name: "Gr Floor", subname: "Big Hall", icon: "business" },
+    { id: "F1F_HALL", name: "1st Floor", subname: "Hall", icon: "business" },
+    { id: "F2F_HALL", name: "2nd Floor", subname: "Hall", icon: "business" },
   ];
-
 
   return (
     <SafeAreaView style={styles.container}>
@@ -35,7 +35,7 @@ export default function HomeScreen() {
           <HallTile
             key={hall.id}
             title={hall.name}
-            subname={hall.subname} 
+            subname={hall.subname}
             subtitle={hall.status}
             icon={hall.icon}
             onPress={() => handlePress(hall)}

@@ -9,9 +9,11 @@ export default function EventCard({ event, onEdit, onDelete, onPress }) {
       <View style={styles.topRow}>
         <View style={styles.badge}>
           <Text style={styles.badgeText}>
-            {event.hallDisplay || (typeof event.hall === 'string' 
-              ? event.hall 
-              : event.hall?.name || 'Unknown Hall')}
+            {event.hallDisplay ||
+              (typeof event.hall === "string"
+                ? event.hall
+                : [event.hall?.name, event.hall?.subname].filter(Boolean).join(" · ") ||
+                  "Unknown Hall")}
           </Text>
         </View>
 

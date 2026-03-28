@@ -198,9 +198,11 @@ export default function EventDetailsScreen({ route, navigation }) {
         </TouchableOpacity>
 
         <Text style={styles.title}>
-          {event.hallDisplay || (typeof event.hall === 'string' 
-            ? event.hall 
-            : event.hall?.name || 'Event Details')}
+          {event.hallDisplay ||
+            (typeof event.hall === "string"
+              ? event.hall
+              : [event.hall?.name, event.hall?.subname].filter(Boolean).join(" · ") ||
+                "Event Details")}
         </Text>
         <Text style={styles.subtitle}>Edit Event Details</Text>
       </View>
